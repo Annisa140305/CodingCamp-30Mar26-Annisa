@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense & Budget Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Expense & Budget Visualizer</h1>
+
+  <!-- TOTAL -->
+  <div class="balance-box">
+    <h3>Total Balance</h3>
+    <h2>Rp <span id="balance">0</span></h2>
+  </div>
+
+  <!-- FORM -->
+  <form id="form">
+    <input type="text" id="name" placeholder="Item Name">
+    <input type="number" id="amount" placeholder="Amount">
+    
+    <select id="category">
+      <option value="">Select Category</option>
+      <option value="Food">Food</option>
+      <option value="Transport">Transport</option>
+      <option value="Fun">Fun</option>
+    </select>
+
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <!-- BOTTOM -->
+  <div class="bottom">
+    
+    <!-- LIST -->
+    <div class="transactions">
+      <h3>Transactions</h3>
+      <ul id="list"></ul>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-box">
+      <h3>Spending by Category</h3>
+      <canvas id="chart"></canvas>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
